@@ -2,7 +2,7 @@
   "name": "antigravity-toolkit",
   "displayName": "Toolkit for Antigravity",
   "description": "%extension.description%",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "publisher": "user",
   "license": "Apache-2.0",
   "keywords": [
