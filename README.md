@@ -1,6 +1,6 @@
 English | [中文文档](docs/README_zh.md)
 
-# Toolkit for Antigravity
+# Antigravity Usage Tracker
 
 > Monitor your AI quota usage and manage cache with ease
 
@@ -15,7 +15,7 @@ English | [中文文档](docs/README_zh.md)
 > 🚀 **Featured in Google AI Blog:** [Where we're going, we don't need chatbots: introducing the Antigravity IDE](https://dev.to/googleai/where-were-going-we-dont-need-chatbots-introducing-the-antigravity-ide-2c3k)
 
 
-**Toolkit for Antigravity** (formerly *Antigravity Panel*) helps you stay on top of your AI model usage in **Google Antigravity IDE**. Get real-time quota monitoring, usage trends, and cache management—all within an integrated sidebar panel.
+**Antigravity Usage Tracker** (formerly *Antigravity Panel*) helps you stay on top of your AI model usage in **Google Antigravity IDE**. Get real-time quota monitoring, usage trends, and cache management—all within an integrated sidebar panel.
 
 ## ✨ Features at a Glance
 
@@ -134,7 +134,7 @@ A workaround for when the built-in "Generate commit message" feature is unavaila
 
 1. Open **Antigravity IDE**
 2. Press `Ctrl+Shift+X` (Windows/Linux) or `Cmd+Shift+X` (macOS) to open Extensions
-3. Search for `Toolkit for Antigravity`
+3. Search for `Antigravity Usage Tracker`
 4. Click **Install**
 
 **Or install from web:**
@@ -247,7 +247,7 @@ Open Settings (`Ctrl+,` / `Cmd+,`) in Antigravity IDE and search for `tfa` to cu
 
 **Your data stays yours.**
 
-Toolkit for Antigravity does not collect, transmit, or store any user data. All operations are performed locally on your machine. The extension only communicates with local components—nothing is sent to external servers.
+Antigravity Usage Tracker does not collect, transmit, or store any user data. All operations are performed locally on your machine. The extension only communicates with local components—nothing is sent to external servers.
 
 **Experimental Feature Notice:**
 The *Smart Quota Monitoring* feature relies on internal metrics exposed by the local Antigravity environment. This functionality is experimental and provided "as-is" to help users better understand their personal usage. It is not an official Google product and may be subject to changes in future IDE updates.

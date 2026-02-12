@@ -1,8 +1,8 @@
 {
   "name": "antigravity-panel",
-  "displayName": "Toolkit for Antigravity",
+  "displayName": "Antigravity Usage Tracker",
   "description": "%extension.description%",
-  "version": "2.6.0",
+  "version": "2.6.2",
   "publisher": "n2ns",
   "license": "Apache-2.0",
   "repository": {
