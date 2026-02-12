@@ -706,10 +706,10 @@ export class AppViewModel implements vscode.Disposable {
             label: 'Weekly Usage',
             type: 'group',
             remaining: totalWeeklyUsage,
-            resetTime: '7 Days',
+            resetTime: '', // No reset time for rolling window
             hasData: true,
             themeColor: '#FF9800', // Orange
-            subLabel: 'of Monthly Limit'
+            subLabel: 'Last 7 Days'
         };
 
         items.push(weeklyTracker);
