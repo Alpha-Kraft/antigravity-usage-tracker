@@ -643,6 +643,8 @@ export class AppViewModel implements vscode.Disposable {
         const strategyGroups = this.strategyManager.getGroups();
         const groupOrder = new Map(strategyGroups.map((g, i) => [g.id, i]));
 
+        let items: QuotaDisplayItem[] = [];
+
         if (config["dashboard.viewMode"] === 'models' && this._lastSnapshot) {
             const models = this._lastSnapshot.models || [];
             const filteredModels = hiddenGroupId ? models.filter(m => this.strategyManager.getGroupForModel(m.modelId, m.label).id !== hiddenGroupId) : models;
@@ -656,7 +658,7 @@ export class AppViewModel implements vscode.Disposable {
                 return orderA - orderB;
             });
 
-            return sortedModels.map(m => {
+            items = sortedModels.map(m => {
                 const group = this.strategyManager.getGroupForModel(m.modelId, m.label);
 
                 // UI Sync: Force 100% if "Ready"
@@ -672,16 +674,47 @@ export class AppViewModel implements vscode.Disposable {
                     themeColor: group.themeColor
                 };
             });
+        } else {
+            items = groups.filter(g => g.id !== hiddenGroupId).map(g => ({
+                id: g.id,
+                label: g.label,
+                type: 'group' as const,
+                remaining: g.remaining,
+                resetTime: g.resetTime,
+                hasData: g.hasData,
+                themeColor: g.themeColor
+            }));
         }
-        return groups.filter(g => g.id !== hiddenGroupId).map(g => ({
-            id: g.id,
-            label: g.label,
-            type: 'group' as const,
-            remaining: g.remaining,
-            resetTime: g.resetTime,
-            hasData: g.hasData,
-            themeColor: g.themeColor
-        }));
+
+        // --- Weekly Tracker Logic ---
+        // Calculate weekly usage (7 days) from storage buckets
+        const weeklyBuckets = this.storageService.calculateUsageBuckets(
+            7 * 24 * 60, // 7 days in minutes
+            60 // 1 hour buckets
+        );
+        let totalWeeklyUsage = 0;
+        for (const bucket of weeklyBuckets) {
+            for (const item of bucket.items) {
+                 if (hiddenGroupId && item.groupId === hiddenGroupId) continue;
+                 totalWeeklyUsage += item.usage;
+            }
+        }
+
+        // Create Weekly Tracker Item
+        const weeklyTracker: QuotaDisplayItem = {
+            id: 'weekly-tracker',
+            label: 'Weekly Usage',
+            type: 'group',
+            remaining: totalWeeklyUsage,
+            resetTime: '7 Days',
+            hasData: true,
+            themeColor: '#FF9800', // Orange
+            subLabel: 'of Monthly Limit'
+        };
+
+        items.push(weeklyTracker);
+
+        return items;
     }
 
     private async updateCacheState(cache: CacheInfo): Promise<void> {
