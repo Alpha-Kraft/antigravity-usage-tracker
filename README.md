@@ -71,29 +71,6 @@
 - Toggle on/off via the sidebar "Rocket" switch or command
 - Ideal for rapid prototyping when you trust the Agent's output
 
-### ✨ Commit Message Generator (Claude)
-
-**Generate conventional commit messages using Claude AI**
-
-A workaround for when the built-in "Generate commit message" feature is unavailable.
-
-**Setup:**
-1. Get an API key from [Anthropic Console](https://console.anthropic.com/)
-2. Run `Antigravity Toolkit: Set Anthropic API Key`
-3. Enter your API key (stored securely, never in plaintext)
-
-**Usage:**
-1. Stage your changes with `git add`
-2. Run `Antigravity Toolkit: Generate Commit Message (Claude)`
-3. The commit message auto-populates in the SCM input box
-
-**Configuration:**
-- **Model**: Choose between Claude Sonnet 4, 3.5 Sonnet, or Opus
-- **Max Diff Size**: Limit characters sent (default: 80,000)
-- **Format**: Conventional commits or simple style
-
-> ⚠️ **Privacy**: Your staged diff is sent to Anthropic's API to generate the message.
-
 ### 🔄 Service Recovery Tools
 
 **Built-in troubleshooting**
@@ -181,8 +158,6 @@ Open Command Palette (`Ctrl+Shift+P` / `Cmd+Shift+P`) and search for:
 | `Antigravity Usage Tracker: Run Diagnostics` | Run connectivity diagnostics |
 | `Antigravity Usage Tracker: Reload Window` | Refresh the webview to resolve UI glitches |
 | `Antigravity Usage Tracker: Toggle Auto-Accept` | Enable/Disable automatic command acceptance |
-| `Antigravity Usage Tracker: Generate Commit Message` | Generate commit message using Local LLM or Claude |
-| `Antigravity Usage Tracker: Set Anthropic API Key` | Configure Anthropic API Key |
 
 ## ⚙️ Configuration
 
@@ -223,15 +198,6 @@ Open Settings (`Ctrl+,` / `Cmd+,`) in Antigravity IDE and search for `tfa` to cu
 | **Debug Mode** | `✗` | Enable verbose logging in Output panel |
 
 
-
-### 🤖 Commit Message Settings
-
-| Setting | Default | Description |
-|---------|---------|-------------|
-| **Endpoint** | `http://localhost...` | API URL (Ollama, Anthropic, OpenAI compatible) |
-| **Model** | `llama3.2` | Model name (e.g. `llama3.2`, `claude-3-haiku`) |
-| **Max Diff Size** | `80000` | Max characters of diff to send to LLM |
-| **Format** | `conventional` | Message format (`conventional` or `simple`) |
 
 ## 🔒 Privacy & Safety Disclaimer
 
