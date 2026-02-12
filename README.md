@@ -1,8 +1,11 @@
-# Toolkit for Antigravity
+# Antigravity Usage Tracker
 
 > Monitor your AI quota usage and manage cache with ease
 
-**Toolkit for Antigravity** helps you stay on top of your AI model usage in **Google Antigravity IDE**. Get real-time quota monitoring, usage trends, and cache management—all within an integrated sidebar panel.
+> 🚀 **Featured in Google AI Blog:** [Where we're going, we don't need chatbots: introducing the Antigravity IDE](https://dev.to/googleai/where-were-going-we-dont-need-chatbots-introducing-the-antigravity-ide-2c3k)
+
+
+**Antigravity Usage Tracker** (formerly *Antigravity Panel*) helps you stay on top of your AI model usage in **Google Antigravity IDE**. Get real-time quota monitoring, usage trends, and cache management—all within an integrated sidebar panel.
 
 ## ✨ Features at a Glance
 
@@ -13,17 +16,9 @@
 - 🌍 **Localization** - Support for 13 languages including runtime notifications
 - 🛠️ **Diagnostics** - Built-in connection check and error reporting
 - 🤖 **Hands-free Mode** - Auto-accept agent commands for heavy workflows
-- ✍️ **AI Commit** - Generate commit messages via Local LLM or Claude
 - ⚙️ **Quick Config Access** - One-click editing for Rules, MCP, and Allowlist
 - 🔄 **Service Recovery** - Restart, Reset, and Reload tools for Antigravity IDE stability
 
-## 📸 Screenshots
-
-| | |
-|:---:|:---:|
-| ![Quota Dashboard](assets/preview1.png) | ![Usage Analytics](assets/preview2.png) |\r\n| ![Cache Management](assets/preview3.png) | ![Settings & Config](assets/preview4.png) |
-
-*Real-time quota monitoring, usage trends, and cache management in one place*
 
 ## 🚀 Key Features
 
@@ -68,29 +63,6 @@
 - Toggle on/off via the sidebar "Rocket" switch or command
 - Ideal for rapid prototyping when you trust the Agent's output
 
-### ✨ Commit Message Generator (Claude)
-
-**Generate conventional commit messages using Claude AI**
-
-A workaround for when the built-in "Generate commit message" feature is unavailable.
-
-**Setup:**
-1. Get an API key from [Anthropic Console](https://console.anthropic.com/)
-2. Run `Antigravity Toolkit: Set Anthropic API Key`
-3. Enter your API key (stored securely, never in plaintext)
-
-**Usage:**
-1. Stage your changes with `git add`
-2. Run `Antigravity Toolkit: Generate Commit Message (Claude)`
-3. The commit message auto-populates in the SCM input box
-
-**Configuration:**
-- **Model**: Choose between Claude Sonnet 4, 3.5 Sonnet, or Opus
-- **Max Diff Size**: Limit characters sent (default: 80,000)
-- **Format**: Conventional commits or simple style
-
-> ⚠️ **Privacy**: Your staged diff is sent to Anthropic's API to generate the message.
-
 ### 🔄 Service Recovery Tools
 
 **Built-in troubleshooting**
@@ -121,7 +93,7 @@ A workaround for when the built-in "Generate commit message" feature is unavaila
 
 1. Open **Antigravity IDE**
 2. Press `Ctrl+Shift+X` (Windows/Linux) or `Cmd+Shift+X` (macOS) to open Extensions
-3. Search for `Toolkit for Antigravity`
+3. Search for `Antigravity Usage Tracker`
 4. Click **Install**
 
 ## 🎯 Quick Start
@@ -130,7 +102,7 @@ A workaround for when the built-in "Generate commit message" feature is unavaila
 
 Click the **Antigravity** icon in the sidebar, or:
 - Press `Ctrl+Shift+P` (Windows/Linux) or `Cmd+Shift+P` (macOS)
-- Type `Antigravity Toolkit: Open Panel`
+- Type `Antigravity Usage Tracker: Open Panel`
 - Press Enter
 
 ### Step 2: Monitor Your Quota
@@ -154,19 +126,17 @@ Open Command Palette (`Ctrl+Shift+P` / `Cmd+Shift+P`) and search for:
 
 | Command | What it does |
 |---------|-------------|
-| `Antigravity Toolkit: Open Panel` | Open the sidebar panel |
-| `Antigravity Toolkit: Refresh Quota` | Manually refresh quota data |
-| `Antigravity Toolkit: Show Cache Size` | Show total cache size notification |
-| `Antigravity Toolkit: Clean Cache` | Delete all cache data (use with caution!) |
-| `Antigravity Toolkit: Open Settings` | Open extension settings |
-| `Antigravity Toolkit: Show Disclaimer` | View privacy and safety disclaimer |
-| `Antigravity Toolkit: Restart Language Server` | Restart Antigravity Agent Service |
-| `Antigravity Toolkit: Reset User Status` | Reset the status updater |
-| `Antigravity Toolkit: Run Diagnostics` | Run connectivity diagnostics |
-| `Antigravity Toolkit: Reload Window` | Refresh the webview to resolve UI glitches |
-| `Antigravity Toolkit: Toggle Auto-Accept` | Enable/Disable automatic command acceptance |
-| `Antigravity Toolkit: Generate Commit Message` | Generate commit message using Local LLM or Claude |
-| `Antigravity Toolkit: Set Anthropic API Key` | Configure Anthropic API Key |
+| `Antigravity Usage Tracker: Open Panel` | Open the sidebar panel |
+| `Antigravity Usage Tracker: Refresh Quota` | Manually refresh quota data |
+| `Antigravity Usage Tracker: Show Cache Size` | Show total cache size notification |
+| `Antigravity Usage Tracker: Clean Cache` | Delete all cache data (use with caution!) |
+| `Antigravity Usage Tracker: Open Settings` | Open extension settings |
+| `Antigravity Usage Tracker: Show Disclaimer` | View privacy and safety disclaimer |
+| `Antigravity Usage Tracker: Restart Language Server` | Restart Antigravity Agent Service |
+| `Antigravity Usage Tracker: Reset User Status` | Reset the status updater |
+| `Antigravity Usage Tracker: Run Diagnostics` | Run connectivity diagnostics |
+| `Antigravity Usage Tracker: Reload Window` | Refresh the webview to resolve UI glitches |
+| `Antigravity Usage Tracker: Toggle Auto-Accept` | Enable/Disable automatic command acceptance |
 
 ## ⚙️ Configuration
 
@@ -206,24 +176,45 @@ Open Settings (`Ctrl+,` / `Cmd+,`) in Antigravity IDE and search for `tfa` to cu
 | **API Path** | `/exa...` | gRPC-Web path for User Status |
 | **Debug Mode** | `✗` | Enable verbose logging in Output panel |
 
-### 🤖 Commit Message Settings
 
-| Setting | Default | Description |
-|---------|---------|-------------|
-| **Endpoint** | `http://localhost...` | API URL (Ollama, Anthropic, OpenAI compatible) |
-| **Model** | `llama3.2` | Model name (e.g. `llama3.2`, `claude-3-haiku`) |
-| **Max Diff Size** | `80000` | Max characters of diff to send to LLM |
-| **Format** | `conventional` | Message format (`conventional` or `simple`) |
 
 ## 🔒 Privacy & Safety Disclaimer
 
 **Your data stays yours.**
 
-Toolkit for Antigravity does not collect, transmit, or store any user data. All operations are performed locally on your machine. The extension only communicates with local components—nothing is sent to external servers.
+Antigravity Usage Tracker does not collect, transmit, or store any user data. All operations are performed locally on your machine. The extension only communicates with local components—nothing is sent to external servers.
 
 **Experimental Feature Notice:**
 The *Smart Quota Monitoring* feature relies on internal metrics exposed by the local Antigravity environment. This functionality is experimental and provided "as-is" to help users better understand their personal usage. It is not an official Google product and may be subject to changes in future IDE updates.
 
+## 🤝 Contributing
+
+We welcome contributions!
+
+For major changes, please open an issue first to discuss your ideas.
+
+## 🤝 Contributors
+
+Special thanks to our community contributors:
+
+*   [**@iskisraell**](https://github.com/iskisraell) - Windows platform stability fixes (v2.5.6).
+*   [**@simbaTmotsi**](https://github.com/simbaTmotsi) - Local LLM Commit Message Generator.
+*   [**@A-vrice**](https://github.com/A-vrice) - Japanese localization.
+
+
 ## 📄 License
 
-Licensed under the [Apache License, Version 2.0](LICENSE).
+Licensed under the Apache License, Version 2.0.
+
+
+---
+
+<div align="center">
+
+**Developed by [datafrog.io](https://datafrog.io)**
+
+
+
+*For Antigravity. By Alpha Kraft.*
+
+</div>

@@ -2,6 +2,7 @@
  * Toolbar & Action Styles
  *
  * Buttons, action cards, toggle switches, recovery actions
+ * (Updated for v3.0.0 Polish)
  */
 
 /* Toolbar Styles - Card wrapper */
@@ -9,12 +10,12 @@
     display: flex;
     flex-wrap: wrap;
     gap: 6px;
-    padding: 8px;
-    margin: 8px 6px;
+    padding: var(--spacing-sm);
+    margin: var(--spacing-sm);
     background: var(--vscode-sideBar-background);
-    border: 1px solid var(--vscode-widget-border, rgba(255, 255, 255, 0.1));
-    border-radius: 6px;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+    border: var(--card-border);
+    border-radius: var(--border-radius-md);
+    box-shadow: var(--card-shadow);
 }
 
 .toolbar-btn {
@@ -27,15 +28,16 @@
     gap: 6px;
     padding: 7px 6px;
     font-size: 0.9rem;
-    background: var(--vscode-input-background);
-    color: var(--vscode-foreground);
-    border: 1px solid var(--vscode-widget-border, transparent);
-    border-radius: 4px;
+    background: var(--vscode-button-secondaryBackground);
+    color: var(--vscode-button-secondaryForeground);
+    border: 1px solid transparent;
+    border-radius: var(--border-radius-sm);
     cursor: pointer;
     font-family: inherit;
     white-space: nowrap;
     transition: background-color 0.2s, transform 0.1s, box-shadow 0.2s;
     /* Disable text wrapping inside button, force entire button to wrap */
+    transition: background-color var(--transition-speed), transform 0.1s;
 }
 
 .toolbar-btn:hover {
@@ -54,6 +56,14 @@
     /* Fix large globe icon */
 }
 
+.toolbar-btn:hover {
+    background: var(--vscode-button-secondaryHoverBackground);
+    transform: translateY(-1px);
+}
+
+.toolbar-btn:active {
+    transform: translateY(0);
+}
 
 .toolbar-btn.primary {
     background: var(--vscode-button-background);
@@ -68,13 +78,13 @@
 
 /* Main Action Card */
 .action-card {
-    margin: 8px;
-    padding: 8px;
+    margin: var(--spacing-sm);
+    padding: var(--spacing-sm);
     background: var(--vscode-sideBar-background);
-    border: 1px solid var(--vscode-widget-border, rgba(255, 255, 255, 0.15));
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-    transition: all 0.3s ease;
+    border: var(--card-border);
+    border-radius: var(--border-radius-md);
+    box-shadow: var(--card-shadow);
+    transition: all var(--transition-speed) var(--transition-ease);
 }
 
 .action-card.collapsed {
@@ -99,9 +109,9 @@
     justify-content: space-between;
     padding: 6px 10px;
     background: var(--vscode-input-background);
-    border: 1px solid var(--vscode-widget-border);
-    border-radius: 4px;
-    transition: background 0.2s ease;
+    border: 1px solid var(--vscode-input-border, transparent);
+    border-radius: var(--border-radius-sm);
+    transition: background 0.2s ease, border-color 0.2s;
 }
 
 .action-row.auto-accept-row.clickable {
@@ -109,7 +119,8 @@
 }
 
 .action-row.auto-accept-row.clickable:hover {
-    background: var(--vscode-list-hoverBackground, rgba(255, 255, 255, 0.05));
+    background: var(--vscode-list-hoverBackground);
+    border-color: var(--vscode-focusBorder);
 }
 
 .action-controls {
@@ -121,7 +132,7 @@
 .collapse-icon {
     font-size: 0.9rem;
     opacity: 0.7;
-    transition: transform 0.3s ease;
+    transition: transform var(--transition-speed);
 }
 
 .action-label {
@@ -158,29 +169,36 @@
     justify-content: center;
     gap: 6px;
     padding: 6px 8px;
-    background: var(--vscode-input-background);
-    color: var(--vscode-foreground);
+    background: var(--vscode-button-secondaryBackground);
+    color: var(--vscode-button-secondaryForeground);
     border: none;
-    border-radius: 4px;
+    border-radius: var(--border-radius-sm);
     cursor: pointer;
     font-family: inherit;
     font-size: 0.9rem;
     font-weight: 500;
-    transition: all 0.15s ease;
+    transition: all var(--transition-speed) cubic-bezier(0.4, 0, 0.2, 1);
     white-space: nowrap;
 }
 
 .action-btn.primary {
-    background: var(--vscode-button-background, #0e639c);
+    background: var(--vscode-button-background);
     color: var(--vscode-button-foreground);
 }
 
 .action-btn:hover {
     background: var(--vscode-button-secondaryHoverBackground);
+    transform: translateY(-1px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.action-btn:active {
+    transform: translateY(0);
+    box-shadow: none;
 }
 
 .action-btn.primary:hover {
-    background: var(--vscode-button-hoverBackground, #1177bb);
+    background: var(--vscode-button-hoverBackground);
 }
 
 .action-btn .codicon {
@@ -210,54 +228,38 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: color-mix(in srgb, var(--vscode-foreground) 18%, transparent);
-    border: 1.5px solid var(--vscode-checkbox-border, #6b6b6b);
+    background-color: var(--vscode-input-background);
+    border: 1px solid var(--vscode-checkbox-border, #6b6b6b);
     border-radius: 24px;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3);
 }
 
 .toggle-slider::before {
     content: "";
     position: absolute;
-    height: 12px;
-    width: 12px;
+    height: 10px;
+    width: 10px;
     left: 2px;
     top: 50%;
     transform: translateY(-50%);
-    background: radial-gradient(circle at 30% 30%,
-            #ffffff 0%,
-            #f0f0f0 20%,
-            #d4d4d4 40%,
-            #a3a3a3 70%,
-            #737373 100%);
+    background: var(--vscode-checkbox-foreground);
     border-radius: 50%;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    box-shadow:
-        0 1px 2px rgba(0, 0, 0, 0.6),
-        inset 0 1px 1px rgba(255, 255, 255, 0.9),
-        inset 0 -1px 1px rgba(0, 0, 0, 0.3);
-    border: 0.5px solid rgba(0, 0, 0, 0.2);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 .toggle-switch input:checked+.toggle-slider {
-    background-color: var(--vscode-charts-green, #388e3c);
-    border-color: var(--vscode-charts-green, #388e3c);
-    box-shadow: 0 0 8px rgba(56, 142, 60, 0.5);
+    background-color: var(--vscode-checkbox-selectBackground, #388e3c);
+    border-color: var(--vscode-checkbox-selectBorder, #388e3c);
 }
 
 .toggle-switch input:checked+.toggle-slider::before {
     transform: translateY(-50%) translateX(16px);
-    background: radial-gradient(circle at 30% 30%,
-            #ffffff 0%,
-            #fafafa 20%,
-            #e5e5e5 40%,
-            #cccccc 70%,
-            #999999 100%);
+    background: var(--vscode-checkbox-selectForeground, #ffffff);
 }
 
 .toggle-switch:hover .toggle-slider {
-    box-shadow: 0 0 4px rgba(255, 255, 255, 0.15);
+    border-color: var(--vscode-focusBorder);
 }
 
 /* Footer Links */
@@ -278,12 +280,12 @@
     background: var(--vscode-button-secondaryBackground);
     color: var(--vscode-button-secondaryForeground);
     border: none;
-    border-radius: 4px;
+    border-radius: var(--border-radius-sm);
     cursor: pointer;
     font-family: inherit;
     font-size: 0.9rem;
     font-weight: 500;
-    transition: all 0.2s ease;
+    transition: all var(--transition-speed) ease;
 }
 
 .link-btn:hover {
@@ -314,15 +316,15 @@
     justify-content: center;
     gap: 6px;
     padding: 6px 4px;
-    background: var(--vscode-input-background);
-    color: var(--vscode-foreground);
-    border: 1px solid var(--vscode-button-border, transparent);
-    border-radius: 4px;
+    background: var(--vscode-button-secondaryBackground);
+    color: var(--vscode-button-secondaryForeground);
+    border: 1px solid transparent;
+    border-radius: var(--border-radius-sm);
     cursor: pointer;
     font-family: inherit;
     font-size: 0.9rem;
     font-weight: 500;
-    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all var(--transition-speed) cubic-bezier(0.4, 0, 0.2, 1);
     white-space: nowrap;
 }
 

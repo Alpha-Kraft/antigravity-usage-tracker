@@ -11,7 +11,6 @@ import { AutomationService } from "./model/services/automation.service";
 import { QuotaStrategyManager } from "./model/strategy";
 import { ConfigManager, IConfigReader, TfaConfig } from "./shared/config/config_manager";
 import { Scheduler } from "./shared/utils/scheduler";
-import { FeedbackManager } from './shared/utils/feedback_manager';
 import { AppViewModel } from "./view-model/app.vm";
 import { StatusBarManager } from "./view/status-bar";
 import { SidebarProvider } from "./view/sidebar-provider";
@@ -20,7 +19,6 @@ import { formatBytes } from "./shared/utils/format";
 import { CommunicationAttempt } from "./shared/utils/types";
 import { getDetailedOSVersion } from "./shared/utils/platform";
 import { getExpectedWorkspaceIds } from "./shared/utils/workspace_id";
-import { generateCommitMessageCommand, setAnthropicApiKeyCommand } from "./commitMessageClaude";
 
 
 /**
@@ -154,11 +152,8 @@ export async function activate(context: vscode.ExtensionContext): Promise<void> 
             message = vscode.l10n.t("Please ensure you are logged into Antigravity IDE (Authentication failed).");
           }
 
-          await FeedbackManager.showFeedbackNotification(message, {
-            ...commonMeta,
-            reason: "parsing_error",
-            parsingInfo: quotaService.parsingError
-          });
+          // Removed FeedbackManager usage
+          warnLog(`Parsing Error: ${message} - ${quotaService.parsingError}`);
           hasShownNotification = true;
         }
 
@@ -202,37 +197,15 @@ export async function activate(context: vscode.ExtensionContext): Promise<void> 
         };
 
         let message = messages[reason];
-        let parsingInfo: string | undefined;
 
         // Smart decision: If it's a single server but auth failed, it's likely a login issue
         if (reason === 'auth_failed' && count === 1) {
           message = vscode.l10n.t("Please ensure you are logged into Antigravity IDE (Authentication failed).");
         }
 
-        // Collect useful diagnostic info only
-        let attemptDetailsStr: string | undefined;
-        if (attempts.length > 0) {
-          parsingInfo = attempts
-            .map(a => `PID:${a.pid} Port:${a.port} Status:${a.statusCode || 'Failed'}${a.error ? ` (${a.error})` : ''}`)
-            .join('; ');
-          attemptDetailsStr = JSON.stringify(attempts.slice(0, 3)); // Limit to first 3 attempts
-        }
-
         if (message) {
-          await FeedbackManager.showFeedbackNotification(message, {
-            ...commonMeta,
-            reason,
-            candidateCount: count,
-            parsingInfo,
-            attemptDetails: attemptDetailsStr,
-            // Enhanced diagnostics v2
-            tokenPreview: processFinder.tokenPreview,
-            portsFromCmdline: processFinder.portsFromCmdline,
-            portsFromNetstat: processFinder.portsFromNetstat,
-            protocolUsed: processFinder.protocolUsed,
-            retryCount: processFinder.retryCount,
-            bootRetryCount: MAX_BOOT_RETRY // Include external retry info
-          });
+          // Removed FeedbackManager usage
+          warnLog(`Connection Failure: ${message} (Reason: ${reason})`);
           hasShownNotification = true;
         }
       }
@@ -446,9 +419,6 @@ export async function activate(context: vscode.ExtensionContext): Promise<void> 
         vscode.window.showInformationMessage(vscode.l10n.t("Auto-Accept: OFF - Manual approval required."));
       }
     }),
-    // Claude commit message generator commands
-    vscode.commands.registerCommand("tfa.generateCommitMessageClaude", () => generateCommitMessageCommand(context)),
-    vscode.commands.registerCommand("tfa.setAnthropicApiKey", () => setAnthropicApiKeyCommand(context)),
     vscode.commands.registerCommand("tfa.runDiagnostics", async () => {
       await vscode.window.withProgress({
         location: vscode.ProgressLocation.Notification,
