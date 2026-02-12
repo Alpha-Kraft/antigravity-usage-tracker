@@ -103,10 +103,6 @@ export interface UserInfo {
   planName?: string;
   /** Teams tier */
   teamsTier?: string;
-  /** Upgrade subscription URI */
-  upgradeUri?: string;
-  /** Upgrade subscription text */
-  upgradeText?: string;
   /** Whether browser feature is enabled */
   browserEnabled?: boolean;
   /** Whether knowledge base is enabled */

@@ -222,8 +222,6 @@ export class QuotaService implements IQuotaService {
             tierDescription: userTier?.description,
             planName: planInfo?.planName,
             teamsTier: planInfo?.teamsTier,
-            upgradeUri: userTier?.upgradeSubscriptionUri,
-            upgradeText: userTier?.upgradeSubscriptionText,
             browserEnabled: planInfo?.browserEnabled,
             knowledgeBaseEnabled: planInfo?.knowledgeBaseEnabled,
             canBuyMoreCredits: planInfo?.canBuyMoreCredits,

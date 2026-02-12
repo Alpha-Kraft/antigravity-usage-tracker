@@ -96,8 +96,6 @@ export interface UserInfoData {
   planName?: string;
   browserEnabled?: boolean;
   knowledgeBaseEnabled?: boolean;
-  upgradeUri?: string;
-  upgradeText?: string;
 }
 
 /** Token usage data */

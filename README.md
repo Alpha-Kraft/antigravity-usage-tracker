@@ -2,9 +2,6 @@
 
 > Monitor your AI quota usage and manage cache with ease
 
-> 🚀 **Featured in Google AI Blog:** [Where we're going, we don't need chatbots: introducing the Antigravity IDE](https://dev.to/googleai/where-were-going-we-dont-need-chatbots-introducing-the-antigravity-ide-2c3k)
-
-
 **Antigravity Usage Tracker** (formerly *Antigravity Panel*) helps you stay on top of your AI model usage in **Google Antigravity IDE**. Get real-time quota monitoring, usage trends, and cache management—all within an integrated sidebar panel.
 
 ## ✨ Features at a Glance
@@ -197,9 +194,9 @@ For major changes, please open an issue first to discuss your ideas.
 
 Special thanks to our community contributors:
 
-*   [**@iskisraell**](https://github.com/iskisraell) - Windows platform stability fixes (v2.5.6).
-*   [**@simbaTmotsi**](https://github.com/simbaTmotsi) - Local LLM Commit Message Generator.
-*   [**@A-vrice**](https://github.com/A-vrice) - Japanese localization.
+*   **iskisraell** - Windows platform stability fixes (v2.5.6).
+*   **simbaTmotsi** - Local LLM Commit Message Generator.
+*   **A-vrice** - Japanese localization.
 
 
 ## 📄 License
@@ -210,8 +207,6 @@ Licensed under the Apache License, Version 2.0.
 ---
 
 <div align="center">
-
-**Developed by [datafrog.io](https://datafrog.io)**
 
 
 
