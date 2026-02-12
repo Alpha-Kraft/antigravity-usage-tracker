@@ -1,12 +1,9 @@
-English | [中文文档](docs/README_zh.md)
-
 # Antigravity Usage Tracker
 
 > Monitor your AI quota usage and manage cache with ease
 
 [![Antigravity IDE](https://img.shields.io/badge/Antigravity-IDE-4285F4?style=flat)](https://antigravity.google)
-[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
-[![Stars](https://img.shields.io/github/stars/n2ns/antigravity-panel?style=flat&logo=github&cacheSeconds=10800)](https://github.com/n2ns/antigravity-panel/stargazers)
+![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)
 
 [![Version](https://img.shields.io/github/v/release/n2ns/antigravity-panel?style=flat&label=version&cacheSeconds=10800)](https://github.com/n2ns/antigravity-panel/releases)
 [![Open VSX Downloads](https://img.shields.io/open-vsx/dt/n2ns/antigravity-panel?style=flat&label=downloads&cacheSeconds=10800)](https://open-vsx.org/extension/n2ns/antigravity-panel)
@@ -30,13 +27,6 @@ English | [中文文档](docs/README_zh.md)
 - ⚙️ **Quick Config Access** - One-click editing for Rules, MCP, and Allowlist
 - 🔄 **Service Recovery** - Restart, Reset, and Reload tools for Antigravity IDE stability
 
-## 📸 Screenshots
-
-| | |
-|:---:|:---:|
-| ![Quota Dashboard](assets/preview1.png) | ![Usage Analytics](assets/preview2.png) |\r\n| ![Cache Management](assets/preview3.png) | ![Settings & Config](assets/preview4.png) |
-
-*Real-time quota monitoring, usage trends, and cache management in one place*
 
 ## 🚀 Key Features
 
@@ -156,7 +146,7 @@ If the marketplace is unavailable or you need a specific version:
 
 Click the **Antigravity** icon in the sidebar, or:
 - Press `Ctrl+Shift+P` (Windows/Linux) or `Cmd+Shift+P` (macOS)
-- Type `Antigravity Toolkit: Open Panel`
+- Type `Antigravity Usage Tracker: Open Panel`
 - Press Enter
 
 ### Step 2: Monitor Your Quota
@@ -180,19 +170,19 @@ Open Command Palette (`Ctrl+Shift+P` / `Cmd+Shift+P`) and search for:
 
 | Command | What it does |
 |---------|-------------|
-| `Antigravity Toolkit: Open Panel` | Open the sidebar panel |
-| `Antigravity Toolkit: Refresh Quota` | Manually refresh quota data |
-| `Antigravity Toolkit: Show Cache Size` | Show total cache size notification |
-| `Antigravity Toolkit: Clean Cache` | Delete all cache data (use with caution!) |
-| `Antigravity Toolkit: Open Settings` | Open extension settings |
-| `Antigravity Toolkit: Show Disclaimer` | View privacy and safety disclaimer |
-| `Antigravity Toolkit: Restart Language Server` | Restart Antigravity Agent Service |
-| `Antigravity Toolkit: Reset User Status` | Reset the status updater |
-| `Antigravity Toolkit: Run Diagnostics` | Run connectivity diagnostics |
-| `Antigravity Toolkit: Reload Window` | Refresh the webview to resolve UI glitches |
-| `Antigravity Toolkit: Toggle Auto-Accept` | Enable/Disable automatic command acceptance |
-| `Antigravity Toolkit: Generate Commit Message` | Generate commit message using Local LLM or Claude |
-| `Antigravity Toolkit: Set Anthropic API Key` | Configure Anthropic API Key |
+| `Antigravity Usage Tracker: Open Panel` | Open the sidebar panel |
+| `Antigravity Usage Tracker: Refresh Quota` | Manually refresh quota data |
+| `Antigravity Usage Tracker: Show Cache Size` | Show total cache size notification |
+| `Antigravity Usage Tracker: Clean Cache` | Delete all cache data (use with caution!) |
+| `Antigravity Usage Tracker: Open Settings` | Open extension settings |
+| `Antigravity Usage Tracker: Show Disclaimer` | View privacy and safety disclaimer |
+| `Antigravity Usage Tracker: Restart Language Server` | Restart Antigravity Agent Service |
+| `Antigravity Usage Tracker: Reset User Status` | Reset the status updater |
+| `Antigravity Usage Tracker: Run Diagnostics` | Run connectivity diagnostics |
+| `Antigravity Usage Tracker: Reload Window` | Refresh the webview to resolve UI glitches |
+| `Antigravity Usage Tracker: Toggle Auto-Accept` | Enable/Disable automatic command acceptance |
+| `Antigravity Usage Tracker: Generate Commit Message` | Generate commit message using Local LLM or Claude |
+| `Antigravity Usage Tracker: Set Anthropic API Key` | Configure Anthropic API Key |
 
 ## ⚙️ Configuration
 
@@ -272,17 +262,10 @@ Special thanks to our community contributors:
 *   [**@simbaTmotsi**](https://github.com/simbaTmotsi) - Local LLM Commit Message Generator.
 *   [**@A-vrice**](https://github.com/A-vrice) - Japanese localization.
 
-## 🌐 Localization Policy
-
-To ensure technical consistency and professional standard across all 13 supported languages:
-- **UI Labels & Technical Terms**: Remain in **English** (e.g., `Rules`, `MCP`, `Auto-Accept`, `Reset Status`).
-- **Tooltips & Descriptions**: Fully **localized** to provide detailed explanations in the user's native language.
-
-For more details, see [LOCALIZATION_RULES.md](docs/LOCALIZATION_RULES.md).
 
 ## 📄 License
 
-Licensed under the [Apache License, Version 2.0](LICENSE).
+Licensed under the Apache License, Version 2.0.
 
 
 ---
@@ -293,6 +276,6 @@ Licensed under the [Apache License, Version 2.0](LICENSE).
 
 
 
-*For Antigravity. By Antigravity.*
+*For Antigravity. By Alpha Kraft.*
 
 </div>

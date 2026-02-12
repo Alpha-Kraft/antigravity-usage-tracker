@@ -1,5 +1,3 @@
-English | [中文文档](docs/CHANGELOG_zh.md)
-
 # Change Log
 
 ## [2.5.11] - 2026-02-01

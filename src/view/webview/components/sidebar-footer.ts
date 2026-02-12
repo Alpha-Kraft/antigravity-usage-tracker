@@ -6,10 +6,6 @@ import { LitElement, html } from 'lit';
 import { customElement, property, state } from 'lit/decorators.js';
 import type { VsCodeApi, WindowWithVsCode } from '../types.js';
 
-/** GitHub repository URLs */
-const GITHUB_ISSUES_URL = 'https://github.com/n2ns/antigravity-panel/issues';
-const GITHUB_HOME_URL = 'https://github.com/n2ns/antigravity-panel';
-
 @customElement('sidebar-footer')
 export class SidebarFooter extends LitElement {
   @property({ type: Boolean })
@@ -54,10 +50,6 @@ export class SidebarFooter extends LitElement {
       ...currentState,
       footerCollapsed: this._isCollapsed
     });
-  }
-
-  private _openUrl(url: string): void {
-    this._vscode?.postMessage({ type: 'openUrl', path: url });
   }
 
   protected render() {
@@ -126,19 +118,7 @@ export class SidebarFooter extends LitElement {
 
       <div class="collapsible-wrapper ${this._isCollapsed ? 'collapsed' : ''}">
         <div class="collapsible-content">
-          <!-- External Links (outside card) -->
-          <div class="footer-links">
-            <button class="link-btn" @click=${() => this._openUrl(GITHUB_ISSUES_URL)}>
-              <i class="codicon codicon-bug"></i>
-              <span>${this._t.reportIssue || 'Feedback'}</span>
-            </button>
-            <button class="link-btn" @click=${() => this._openUrl(GITHUB_HOME_URL)}>
-              <i class="codicon codicon-star-full" style="color: #e3b341;"></i>
-              <span>${this._t.giveStar || 'Star'}</span>
-            </button>
-          </div>
-
-          <div class="sidebar-tagline">For Antigravity. By Antigravity.</div>
+          <div class="sidebar-tagline">For Antigravity. By Alpha Kraft.</div>
         </div>
       </div>
     `;
