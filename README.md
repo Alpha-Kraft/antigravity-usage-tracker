@@ -1,21 +1,8 @@
-English | [中文文档](docs/README_zh.md)
-
 # Toolkit for Antigravity
 
 > Monitor your AI quota usage and manage cache with ease
 
-[![Antigravity IDE](https://img.shields.io/badge/Antigravity-IDE-4285F4?style=flat)](https://antigravity.google)
-[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
-[![Stars](https://img.shields.io/github/stars/n2ns/antigravity-panel?style=flat&logo=github&cacheSeconds=10800)](https://github.com/n2ns/antigravity-panel/stargazers)
-
-[![Version](https://img.shields.io/github/v/release/n2ns/antigravity-panel?style=flat&label=version&cacheSeconds=10800)](https://github.com/n2ns/antigravity-panel/releases)
-[![Open VSX Downloads](https://img.shields.io/open-vsx/dt/n2ns/antigravity-panel?style=flat&label=downloads&cacheSeconds=10800)](https://open-vsx.org/extension/n2ns/antigravity-panel)
-[![Last Commit](https://img.shields.io/github/last-commit/n2ns/antigravity-panel?style=flat&cacheSeconds=10800)](https://github.com/n2ns/antigravity-panel/commits/main)
-
-> 🚀 **Featured in Google AI Blog:** [Where we're going, we don't need chatbots: introducing the Antigravity IDE](https://dev.to/googleai/where-were-going-we-dont-need-chatbots-introducing-the-antigravity-ide-2c3k)
-
-
-**Toolkit for Antigravity** (formerly *Antigravity Panel*) helps you stay on top of your AI model usage in **Google Antigravity IDE**. Get real-time quota monitoring, usage trends, and cache management—all within an integrated sidebar panel.
+**Toolkit for Antigravity** helps you stay on top of your AI model usage in **Google Antigravity IDE**. Get real-time quota monitoring, usage trends, and cache management—all within an integrated sidebar panel.
 
 ## ✨ Features at a Glance
 
@@ -137,19 +124,6 @@ A workaround for when the built-in "Generate commit message" feature is unavaila
 3. Search for `Toolkit for Antigravity`
 4. Click **Install**
 
-**Or install from web:**
-- [Extension Marketplace](https://marketplace.visualstudio.com/items?itemName=n2ns.antigravity-panel)
-- [Open VSX Registry](https://open-vsx.org/extension/n2ns/antigravity-panel)
-
-### Manual Install from GitHub Releases
-
-If the marketplace is unavailable or you need a specific version:
-
-1. Download the `.vsix` file from [GitHub Releases](https://github.com/n2ns/antigravity-panel/releases)
-2. Open Antigravity IDE → Extensions panel
-3. Click `⋯` (More Actions) → `Install from VSIX...`
-4. Select the downloaded `.vsix` file
-
 ## 🎯 Quick Start
 
 ### Step 1: Open the Panel
@@ -232,8 +206,6 @@ Open Settings (`Ctrl+,` / `Cmd+,`) in Antigravity IDE and search for `tfa` to cu
 | **API Path** | `/exa...` | gRPC-Web path for User Status |
 | **Debug Mode** | `✗` | Enable verbose logging in Output panel |
 
-
-
 ### 🤖 Commit Message Settings
 
 | Setting | Default | Description |
@@ -252,47 +224,6 @@ Toolkit for Antigravity does not collect, transmit, or store any user data. All 
 **Experimental Feature Notice:**
 The *Smart Quota Monitoring* feature relies on internal metrics exposed by the local Antigravity environment. This functionality is experimental and provided "as-is" to help users better understand their personal usage. It is not an official Google product and may be subject to changes in future IDE updates.
 
-## 🤝 Contributing
-
-We welcome contributions! If you find this toolkit helpful, please give us a **Star** 🌟 on GitHub! It's the best way to support our work and help others discover it.
-
-Here's how you can help:
-
-1. **Report bugs**: [Open an issue](https://github.com/n2ns/antigravity-panel/issues)
-2. **Suggest features**: [Start a discussion](https://github.com/n2ns/antigravity-panel/discussions)
-3. **Submit code**: Fork, code, test, and [open a PR](https://github.com/n2ns/antigravity-panel/pulls)
-
-For major changes, please open an issue first to discuss your ideas.
-
-## 🤝 Contributors
-
-Special thanks to our community contributors:
-
-*   [**@iskisraell**](https://github.com/iskisraell) - Windows platform stability fixes (v2.5.6).
-*   [**@simbaTmotsi**](https://github.com/simbaTmotsi) - Local LLM Commit Message Generator.
-*   [**@A-vrice**](https://github.com/A-vrice) - Japanese localization.
-
-## 🌐 Localization Policy
-
-To ensure technical consistency and professional standard across all 13 supported languages:
-- **UI Labels & Technical Terms**: Remain in **English** (e.g., `Rules`, `MCP`, `Auto-Accept`, `Reset Status`).
-- **Tooltips & Descriptions**: Fully **localized** to provide detailed explanations in the user's native language.
-
-For more details, see [LOCALIZATION_RULES.md](docs/LOCALIZATION_RULES.md).
-
 ## 📄 License
 
 Licensed under the [Apache License, Version 2.0](LICENSE).
-
-
----
-
-<div align="center">
-
-**Developed by [datafrog.io](https://datafrog.io)**
-
-
-
-*For Antigravity. By Antigravity.*
-
-</div>

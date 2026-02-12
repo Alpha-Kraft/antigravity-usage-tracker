@@ -38,6 +38,11 @@ quota-pie {
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.gauge-container:hover .gauge-visual {
+    transform: scale(1.05);
 }
 
 .style-semi-arc .gauge-visual {
@@ -128,7 +133,7 @@ quota-pie {
     fill: none;
     stroke-width: 5.8;
     stroke-linecap: butt;
-    transition: stroke-dashoffset 1s cubic-bezier(0.16, 1, 0.3, 1);
+    transition: stroke-dashoffset 1.5s cubic-bezier(0.22, 1, 0.36, 1);
     /* Sharp focused glow, minimal diffusion to avoid separator bleed */
     filter: drop-shadow(0 0 1px currentColor) drop-shadow(0 0 2px currentColor);
 }

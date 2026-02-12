@@ -1,15 +1,10 @@
 {
-  "name": "antigravity-panel",
+  "name": "antigravity-toolkit",
   "displayName": "Toolkit for Antigravity",
   "description": "%extension.description%",
-  "version": "2.5.11",
-  "publisher": "n2ns",
+  "version": "0.0.1",
+  "publisher": "user",
   "license": "Apache-2.0",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/n2ns/antigravity-panel.git"
-  },
-  "homepage": "https://datafrog.io",
   "keywords": [
     "Antigravity",
     "Antigravity Panel",
@@ -23,7 +18,6 @@
     "Panel",
     "Dashboard"
   ],
-  "icon": "assets/icon.png",
   "engines": {
     "vscode": "^1.104.0"
   },
