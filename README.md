@@ -2,13 +2,6 @@
 
 > Monitor your AI quota usage and manage cache with ease
 
-[![Antigravity IDE](https://img.shields.io/badge/Antigravity-IDE-4285F4?style=flat)](https://antigravity.google)
-![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)
-
-[![Version](https://img.shields.io/github/v/release/n2ns/antigravity-panel?style=flat&label=version&cacheSeconds=10800)](https://github.com/n2ns/antigravity-panel/releases)
-[![Open VSX Downloads](https://img.shields.io/open-vsx/dt/n2ns/antigravity-panel?style=flat&label=downloads&cacheSeconds=10800)](https://open-vsx.org/extension/n2ns/antigravity-panel)
-[![Last Commit](https://img.shields.io/github/last-commit/n2ns/antigravity-panel?style=flat&cacheSeconds=10800)](https://github.com/n2ns/antigravity-panel/commits/main)
-
 > 🚀 **Featured in Google AI Blog:** [Where we're going, we don't need chatbots: introducing the Antigravity IDE](https://dev.to/googleai/where-were-going-we-dont-need-chatbots-introducing-the-antigravity-ide-2c3k)
 
 
@@ -23,7 +16,6 @@
 - 🌍 **Localization** - Support for 13 languages including runtime notifications
 - 🛠️ **Diagnostics** - Built-in connection check and error reporting
 - 🤖 **Hands-free Mode** - Auto-accept agent commands for heavy workflows
-- ✍️ **AI Commit** - Generate commit messages via Local LLM or Claude
 - ⚙️ **Quick Config Access** - One-click editing for Rules, MCP, and Allowlist
 - 🔄 **Service Recovery** - Restart, Reset, and Reload tools for Antigravity IDE stability
 
@@ -103,19 +95,6 @@
 2. Press `Ctrl+Shift+X` (Windows/Linux) or `Cmd+Shift+X` (macOS) to open Extensions
 3. Search for `Antigravity Usage Tracker`
 4. Click **Install**
-
-**Or install from web:**
-- [Extension Marketplace](https://marketplace.visualstudio.com/items?itemName=n2ns.antigravity-panel)
-- [Open VSX Registry](https://open-vsx.org/extension/n2ns/antigravity-panel)
-
-### Manual Install from GitHub Releases
-
-If the marketplace is unavailable or you need a specific version:
-
-1. Download the `.vsix` file from [GitHub Releases](https://github.com/n2ns/antigravity-panel/releases)
-2. Open Antigravity IDE → Extensions panel
-3. Click `⋯` (More Actions) → `Install from VSIX...`
-4. Select the downloaded `.vsix` file
 
 ## 🎯 Quick Start
 
@@ -210,13 +189,7 @@ The *Smart Quota Monitoring* feature relies on internal metrics exposed by the l
 
 ## 🤝 Contributing
 
-We welcome contributions! If you find this toolkit helpful, please give us a **Star** 🌟 on GitHub! It's the best way to support our work and help others discover it.
-
-Here's how you can help:
-
-1. **Report bugs**: [Open an issue](https://github.com/n2ns/antigravity-panel/issues)
-2. **Suggest features**: [Start a discussion](https://github.com/n2ns/antigravity-panel/discussions)
-3. **Submit code**: Fork, code, test, and [open a PR](https://github.com/n2ns/antigravity-panel/pulls)
+We welcome contributions!
 
 For major changes, please open an issue first to discuss your ideas.
 
