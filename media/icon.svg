@@ -1,0 +1,20 @@
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Outer gauge arc -->
+  <path d="M4 12C4 7.58172 7.58172 4 12 4C16.4183 4 20 7.58172 20 12" stroke="white" stroke-width="2" stroke-linecap="round"/>
+  
+  <!-- Inner gauge segments -->
+  <path d="M6 12C6 8.68629 8.68629 6 12 6C15.3137 6 18 8.68629 18 12" stroke="white" stroke-width="1.5" stroke-linecap="round" opacity="0.4"/>
+  
+  <!-- Gauge needle/indicator -->
+  <path d="M12 12L15.5 8.5" stroke="white" stroke-width="2" stroke-linecap="round"/>
+  <circle cx="12" cy="12" r="1.5" fill="white"/>
+  
+  <!-- AI chip icon at bottom -->
+  <rect x="9" y="15" width="6" height="6" rx="1" stroke="white" stroke-width="1.5"/>
+  <line x1="10.5" y1="17" x2="13.5" y2="17" stroke="white" stroke-width="0.8"/>
+  <line x1="10.5" y1="19" x2="13.5" y2="19" stroke="white" stroke-width="0.8"/>
+  
+  <!-- Connection dots -->
+  <circle cx="9" cy="18" r="0.8" fill="white"/>
+  <circle cx="15" cy="18" r="0.8" fill="white"/>
+</svg>

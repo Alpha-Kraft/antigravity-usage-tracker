@@ -1,0 +1,85 @@
+{
+  "name": "antigravity-usage-tracker",
+  "displayName": "Antigravity Usage Tracker",
+  "description": "Monitor AI usage quotas for Gemini Pro, Gemini Flash, and Claude with a professional glassmorphic dashboard",
+  "version": "0.0.1",
+  "publisher": "Alpha Kraft",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alphakraft/antigravity-usage-tracker"
+  },
+  "bugs": {
+    "url": "https://github.com/alphakraft/antigravity-usage-tracker/issues"
+  },
+  "homepage": "https://github.com/alphakraft/antigravity-usage-tracker#readme",
+  "keywords": [
+    "antigravity",
+    "ai",
+    "usage",
+    "tracker",
+    "quota",
+    "gemini",
+    "claude",
+    "monitoring",
+    "dashboard"
+  ],
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "antigravity-usage",
+          "title": "Antigravity Usage",
+          "icon": "media/icon.svg"
+        }
+      ]
+    },
+    "views": {
+      "antigravity-usage": [
+        {
+          "type": "webview",
+          "id": "antigravity-usage-dashboard",
+          "name": "Usage Dashboard"
+        }
+      ]
+    },
+    "commands": [
+      {
+        "command": "antigravity-usage.refresh",
+        "title": "Refresh Usage Data",
+        "icon": "$(refresh)"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src --ext ts",
+    "test": "node ./out/test/runTest.js",
+    "package": "vsce package"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@types/vscode": "^1.80.0",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "@vscode/vsce": "^2.32.0",
+    "eslint": "^8.0.0",
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "axios": "^1.6.0"
+  }
+}
