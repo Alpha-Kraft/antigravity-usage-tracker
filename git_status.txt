@@ -1,0 +1,15 @@
+D  .github/workflows/ci.yml
+D  .github/workflows/publish.yml
+D  .husky/pre-commit
+M  CHANGELOG.md
+M  README.md
+M  package-lock.json
+M  package.json
+D  reproduce_issue.js
+D  response_a.json
+D  response_b.json
+M  src/view/styles/base.css
+M  src/view/styles/chart.css
+M  src/view/styles/gauge.css
+M  src/view/styles/toolbar.css
+?? git_status.txt
