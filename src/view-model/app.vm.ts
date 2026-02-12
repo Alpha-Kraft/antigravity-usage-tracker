@@ -686,34 +686,6 @@ export class AppViewModel implements vscode.Disposable {
             }));
         }
 
-        // --- Weekly Tracker Logic ---
-        // Calculate weekly usage (7 days) from storage buckets
-        const weeklyBuckets = this.storageService.calculateUsageBuckets(
-            7 * 24 * 60, // 7 days in minutes
-            60 // 1 hour buckets
-        );
-        let totalWeeklyUsage = 0;
-        for (const bucket of weeklyBuckets) {
-            for (const item of bucket.items) {
-                 if (hiddenGroupId && item.groupId === hiddenGroupId) continue;
-                 totalWeeklyUsage += item.usage;
-            }
-        }
-
-        // Create Weekly Tracker Item
-        const weeklyTracker: QuotaDisplayItem = {
-            id: 'weekly-tracker',
-            label: 'Weekly Usage',
-            type: 'group',
-            remaining: totalWeeklyUsage,
-            resetTime: '', // No reset time for rolling window
-            hasData: true,
-            themeColor: '#FF9800', // Orange
-            subLabel: 'Last 7 Days'
-        };
-
-        items.push(weeklyTracker);
-
         return items;
     }
 
