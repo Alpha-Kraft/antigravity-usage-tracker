@@ -47,14 +47,14 @@ sidebar-footer {
     text-align: center;
     font-size: 0.75rem;
     font-style: italic;
-    color: var(--vscode-foreground);
+    color: var(--vscode-descriptionForeground);
     padding: 4px 16px 12px;
-    opacity: 0.5;
+    opacity: 0.7;
     width: 100%;
     box-sizing: border-box;
     margin-top: 0;
-    background: color-mix(in srgb, var(--vscode-foreground) 5%, transparent);
-    border-radius: 4px;
+    background: color-mix(in srgb, var(--vscode-foreground) 3%, transparent);
+    border-radius: var(--border-radius-sm);
     letter-spacing: 0.5px;
 }
 
@@ -66,9 +66,15 @@ sidebar-footer {
     padding: 10px 12px;
     margin: 4px 6px 8px 6px;
     background: var(--vscode-sideBar-background);
-    border: 1px solid var(--vscode-widget-border, rgba(255, 255, 255, 0.1));
-    border-radius: 6px;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+    border: var(--card-border);
+    border-radius: var(--border-radius-md);
+    box-shadow: var(--card-shadow);
+    transition: transform var(--transition-speed);
+}
+
+.credits-bar:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 .credits-title {
@@ -76,6 +82,7 @@ sidebar-footer {
     font-size: 0.85rem;
     color: var(--vscode-foreground);
     margin-bottom: 4px;
+    font-weight: 600;
 }
 
 .credits-bar .credit-item {
@@ -91,6 +98,7 @@ sidebar-footer {
     color: var(--vscode-foreground);
     font-weight: 500;
     font-size: 0.8rem;
+    opacity: 0.9;
 }
 
 .credits-bar .credit-value {
@@ -103,7 +111,8 @@ sidebar-footer {
 .credits-bar .credit-progress {
     width: 100%;
     height: 4px;
-    background: rgba(255, 255, 255, 0.1);
+    background: var(--vscode-progressBar-background);
+    opacity: 0.3;
     border-radius: 2px;
     overflow: hidden;
     margin-top: 2px;
@@ -113,17 +122,24 @@ sidebar-footer {
     height: 100%;
     border-radius: 2px;
     transition: width 0.5s ease;
+    background: var(--vscode-progressBar-background);
 }
 
 /* User Info Card Styles */
 .user-info-card {
     padding: 10px 14px;
     background: var(--vscode-sideBar-background);
-    border: 1px solid var(--vscode-widget-border, rgba(255, 255, 255, 0.25));
-    border-radius: 4px;
+    border: var(--card-border);
+    border-radius: var(--border-radius-md);
     margin: 10px 8px;
     /* Slightly more vertical spacing */
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+    box-shadow: var(--card-shadow);
+    transition: transform var(--transition-speed);
+}
+
+.user-info-card:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 .user-info-card .user-header {
@@ -184,18 +200,18 @@ sidebar-footer {
     background: var(--vscode-button-secondaryBackground);
     color: var(--vscode-button-secondaryForeground);
     border: none;
-    border-radius: 4px;
+    border-radius: var(--border-radius-sm);
     cursor: pointer;
     font-family: inherit;
     font-size: 0.9rem;
     font-weight: 500;
-    transition: all 0.2s ease;
+    transition: all var(--transition-speed) ease;
     white-space: nowrap;
 }
 
 .user-info-card .tier-badge {
-    padding: 4px 12px;
-    border-radius: 3px;
+    padding: 2px 8px;
+    border-radius: 12px;
     background: var(--vscode-badge-background);
     color: var(--vscode-badge-foreground);
     font-size: 0.75rem;
@@ -212,10 +228,11 @@ sidebar-footer {
     align-items: center;
     gap: 8px;
     font-size: 0.85rem;
+    margin-top: 4px;
 }
 
 .user-info-card .user-label {
-    color: var(--vscode-foreground);
+    color: var(--vscode-descriptionForeground);
     min-width: 40px;
 }
 
@@ -225,7 +242,7 @@ sidebar-footer {
 }
 
 .user-info-card .token-section {
-    margin-top: 6px;
+    margin-top: 8px;
     padding-top: 8px;
     border-top: 1px solid var(--vscode-widget-border);
 }
@@ -235,10 +252,11 @@ sidebar-footer {
     justify-content: space-between;
     align-items: center;
     font-size: 0.8rem;
+    margin-bottom: 2px;
 }
 
 .user-info-card .token-label {
-    color: var(--vscode-foreground);
+    color: var(--vscode-descriptionForeground);
 }
 
 .user-info-card .token-value {
@@ -249,9 +267,10 @@ sidebar-footer {
 
 .user-info-card .progress-bar {
     height: 6px;
-    background: var(--vscode-progressBar-background, rgba(255, 255, 255, 0.1));
+    background: var(--vscode-progressBar-background);
+    opacity: 0.2;
     border-radius: 3px;
-    margin: 6px 0;
+    margin: 4px 0 8px 0;
     overflow: hidden;
 }
 
@@ -259,6 +278,7 @@ sidebar-footer {
     height: 100%;
     border-radius: 3px;
     transition: width 0.5s ease, background 0.3s ease;
+    background: var(--vscode-progressBar-background);
 }
 
 .user-info-card .usage-info {

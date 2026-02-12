@@ -24,7 +24,7 @@ quota-pie {
     align-items: center;
     padding: 0.75rem 0.3rem 0.15rem 0.3rem;
     /* Reduced bottom padding */
-    transition: transform 0.2s ease;
+    transition: transform var(--transition-speed) var(--transition-ease);
 }
 
 .gauge-container:hover {
@@ -101,7 +101,7 @@ quota-pie {
     stroke-width: 3.2;
     /* Widened from 2.2 */
     stroke-linecap: butt;
-    opacity: 0.15;
+    opacity: 0.3; /* Increased opacity for better visibility */
 }
 
 .gauge-track-fg {
@@ -110,18 +110,15 @@ quota-pie {
     stroke-width: 1.5;
     /* Widened from 1.0 */
     stroke-linecap: butt;
-    opacity: 0.25;
+    opacity: 0.5; /* Increased opacity for clarity */
 }
 
 .gauge-separator {
     fill: none;
-    stroke: var(--vscode-widget-border);
-    /* True black for separation */
-    stroke-width: 1.5;
-    /* Equal to fg tracks */
+    stroke: var(--vscode-sideBar-background); /* Match sidebar background */
+    stroke-width: 2; /* Slightly thicker */
     stroke-linecap: butt;
-    opacity: 0.8;
-    /* Strong enough to block color bleed */
+    opacity: 1; /* Fully opaque */
 }
 
 .gauge-fill {
@@ -181,7 +178,7 @@ quota-pie {
 .gauge-reset-inner {
     font-size: 0.8rem;
     font-weight: 500;
-    color: var(--vscode-foreground);
+    color: var(--vscode-descriptionForeground); /* Use correct var */
     opacity: 0.85;
     margin-top: 0px;
     line-height: 1.1;
@@ -220,8 +217,8 @@ quota-pie {
 
 .gauge-sub-label {
     font-size: 0.62rem;
-    color: var(--vscode-foreground);
-    opacity: 0.4;
+    color: var(--vscode-descriptionForeground);
+    opacity: 0.8;
     margin-top: 0px;
 }
 
@@ -240,22 +237,22 @@ quota-pie {
 
 /* Connection Hint Banner */
 .connection-hint {
-    background-color: var(--vscode-button-background);
-    color: var(--vscode-button-foreground);
+    background-color: var(--vscode-inputValidation-infoBackground);
+    color: var(--vscode-inputValidation-infoForeground);
+    border: 1px solid var(--vscode-inputValidation-infoBorder);
     padding: 8px 12px;
     margin: 8px;
-    border-radius: 6px;
+    border-radius: var(--border-radius-md);
     display: flex;
     align-items: flex-start;
     gap: 10px;
     font-size: 0.85rem;
     line-height: 1.4;
-    border: none;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    box-shadow: var(--card-shadow);
 }
 
 .connection-hint .codicon-warning {
-    color: var(--vscode-notificationsWarningIcon-foreground, #cca700);
+    color: var(--vscode-notificationsWarningIcon-foreground);
     font-size: 1.25em;
     margin-top: 1px;
 }
