@@ -1,4 +1,5 @@
-<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect x="3" y="3" width="18" height="18" rx="2" stroke="currentColor" stroke-width="1.5"/>
-  <text x="12" y="16" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="currentColor">T<tspan fill="#ff0000" dy="-2.5">.</tspan><tspan dy="2.5">A</tspan></text>
+<svg width="128" height="128" viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="128" height="128" rx="28" fill="#2D2D2D"/>
+  <path d="M64 28L28 100H100L64 28Z" stroke="#4CAF50" stroke-width="10" stroke-linejoin="round"/>
+  <path d="M28 100L52 68L76 84L100 44" stroke="#2196F3" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>

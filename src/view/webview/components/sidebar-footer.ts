@@ -121,13 +121,6 @@ export class SidebarFooter extends LitElement {
           <div class="sidebar-tagline">
             For Antigravity. By
             <span class="brand-logo">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-right: 4px;">
-                <path d="M4 22h16"></path>
-                <path d="M12 2L4 22"></path>
-                <path d="M12 2l8 20"></path>
-                <path d="M8 12h8"></path>
-                <text x="50%" y="85%" dominant-baseline="middle" text-anchor="middle" font-size="8" fill="currentColor" stroke="none">AK</text>
-              </svg>
               Alpha Kraft.
             </span>
           </div>
