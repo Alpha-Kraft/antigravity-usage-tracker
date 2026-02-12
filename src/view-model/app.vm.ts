@@ -396,8 +396,6 @@ export class AppViewModel implements vscode.Disposable {
                 planName: snapshot.userInfo.planName,
                 browserEnabled: snapshot.userInfo.browserEnabled,
                 knowledgeBaseEnabled: snapshot.userInfo.knowledgeBaseEnabled,
-                upgradeUri: snapshot.userInfo.upgradeUri,
-                upgradeText: snapshot.userInfo.upgradeText,
             };
         }
 

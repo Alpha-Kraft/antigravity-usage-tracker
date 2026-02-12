@@ -37,7 +37,6 @@ export function getWslHostIp(resolvReader?: () => string): string | null {
         // 10.255.255.254 is the DNS resolver address in WSL2 Mirrored Networking Mode,
         // NOT a valid Host IP for connecting to Windows services.
         // In mirrored mode, 127.0.0.1 directly routes to the Windows loopback adapter.
-        // See: https://learn.microsoft.com/en-us/windows/wsl/networking#mirrored-mode-networking
         if (nameserver === '10.255.255.254') {
             return null;
         }

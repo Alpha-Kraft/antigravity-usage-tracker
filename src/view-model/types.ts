@@ -139,10 +139,6 @@ export interface UserViewState {
     browserEnabled?: boolean;
     /** Whether knowledge base is enabled */
     knowledgeBaseEnabled?: boolean;
-    /** Upgrade URI if available */
-    upgradeUri?: string;
-    /** Upgrade button text */
-    upgradeText?: string;
 }
 
 // ==================== Token Usage View State ====================
