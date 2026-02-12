@@ -418,12 +418,8 @@
 
 ## [1.0.0] - 2025-12-09
 
-### Added
+## [1.0.0] - 2026-03-01
 
-- Initial release
-- Real-time Gemini API quota monitoring with visual charts
-- Cache management for Gemini conversations
-- Quick access to Gemini configuration files
-- Multi-language support (English, Chinese, Japanese, Korean, and more)
-- Automatic quota refresh with configurable intervals
-- Status bar integration showing current quota usage
+- Initial stable release of the Antigravity Toolkit.
+- Features: Quota monitoring, Usage analytics, Cache management, Commit message generation.
+- Enhanced UI with smooth transitions and professional styling.

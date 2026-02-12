@@ -19,7 +19,6 @@
     "Panel",
     "Dashboard"
   ],
-  "icon": "assets/icon.png",
   "engines": {
     "vscode": "^1.104.0"
   },

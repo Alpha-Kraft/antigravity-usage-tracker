@@ -45,6 +45,7 @@ sidebar-app {
   flex-direction: column;
   height: 100%;
   overflow: hidden;
+  transition: opacity 0.3s ease-in-out;
 }
 
 /* Common styles */
@@ -73,6 +74,11 @@ sidebar-app {
 [data-tooltip] {
   position: relative;
   cursor: help;
+  transition: transform 0.1s ease;
+}
+
+[data-tooltip]:hover {
+  transform: scale(1.02);
 }
 
 /* Global Tooltip Element (Managed by TooltipManager.ts) */

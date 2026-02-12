@@ -25,8 +25,8 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: 4px;
-    padding: 6px 4px;
+    gap: 6px;
+    padding: 7px 6px;
     font-size: 0.9rem;
     background: var(--vscode-button-secondaryBackground);
     color: var(--vscode-button-secondaryForeground);
@@ -35,8 +35,20 @@
     cursor: pointer;
     font-family: inherit;
     white-space: nowrap;
+    transition: background-color 0.2s, transform 0.1s, box-shadow 0.2s;
     /* Disable text wrapping inside button, force entire button to wrap */
     transition: background-color var(--transition-speed), transform 0.1s;
+}
+
+.toolbar-btn:hover {
+    background: var(--vscode-list-hoverBackground);
+    transform: translateY(-1px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.toolbar-btn:active {
+    transform: translateY(0);
+    box-shadow: none;
 }
 
 .toolbar-btn .codicon-globe {
