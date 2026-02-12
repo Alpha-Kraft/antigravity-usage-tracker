@@ -1,5 +1,13 @@
 # Change Log
 
+## [3.0.0] - 2026-02-04
+
+### Changed
+
+- **Rebranding**: Renamed extension to **Antigravity Usage Tracker** (published by Alpha Kraft).
+- **Privacy**: Removed all 3rd-party data transmission features (Feedback, Commit Generator).
+- **UI Polish**: Complete visual overhaul with glassmorphism and smooth transitions.
+
 ## [2.5.11] - 2026-02-01
 
 ### Added
